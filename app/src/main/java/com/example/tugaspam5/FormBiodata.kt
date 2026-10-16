@@ -127,3 +127,38 @@ fun FormBiodata() {
                     .height(dimensionResource(R.dimen.banner_height))
             )
 
+            // BOX YANG MENGAPUNG di atas Scaffold
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .fillMaxHeight(floatResource(R.dimen.form_height_fraction))
+                    .shadow(
+                        elevation = dimensionResource(R.dimen.card_elevation),
+                        shape = cardShape
+                    )
+                    .clip(cardShape)
+                    .background(colorResource(R.color.form_background))
+            ) {
+                Column(
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState())
+                        .padding(dimensionResource(R.dimen.spacing_l)),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = stringResource(R.string.form_title),
+                        color = colorResource(R.color.purple_title),
+                        fontSize = spResource(R.dimen.text_title),
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        text = stringResource(R.string.form_subtitle),
+                        color = colorResource(R.color.text_subtitle),
+                        fontSize = spResource(R.dimen.text_subtitle),
+                        modifier = Modifier.padding(
+                            top = dimensionResource(R.dimen.spacing_s),
+                            bottom = dimensionResource(R.dimen.spacing_l)
+                        )
+                    )
+
