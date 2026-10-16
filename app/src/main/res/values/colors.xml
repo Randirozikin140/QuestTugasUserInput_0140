@@ -3,5 +3,8 @@
     <color name="purple_title">#5E35B1</color>
     <color name="form_background">#FFFFFF</color>
     <color name="screen_background">#1A0033</color>
+    <color name="text_subtitle">#757575</color>
+    <color name="text_primary">#000000</color>
+    <color name="field_outline">#79747E</color>
 
 </resources>
