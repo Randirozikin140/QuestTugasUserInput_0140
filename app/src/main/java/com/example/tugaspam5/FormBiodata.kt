@@ -255,3 +255,25 @@ fun FormBiodata() {
                             }
                         }
                     }
+
+                    // Skill
+                    Text(
+                        text = stringResource(R.string.skill_title),
+                        color = colorResource(R.color.text_primary),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(
+                                top = dimensionResource(R.dimen.spacing_l),
+                                bottom = dimensionResource(R.dimen.spacing_xs)
+                            )
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        SkillCheck(stringResource(R.string.skill_android), skillAndroid) { skillAndroid = it }
+                        SkillCheck(stringResource(R.string.skill_uiux), skillUiux) { skillUiux = it }
+                        SkillCheck(stringResource(R.string.skill_web), skillWeb) { skillWeb = it }
+                    }
