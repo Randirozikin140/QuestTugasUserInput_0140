@@ -11,5 +11,9 @@
     <dimen name="button_height">52dp</dimen>
     <dimen name="card_elevation">12dp</dimen>
 
+    <!-- Sudut -->
+    <dimen name="card_corner">32dp</dimen>
+    <dimen name="field_corner">20dp</dimen>
+
 
 </resources>
