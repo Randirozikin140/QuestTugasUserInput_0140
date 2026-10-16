@@ -20,5 +20,7 @@
     <dimen name="text_subtitle">12sp</dimen>
     <dimen name="text_small">12sp</dimen>
 
-
+    <!-- Nilai pecahan / bobot -->
+    <item name="form_height_fraction" format="float" type="dimen">0.78</item>
+    <item name="weight_equal" format="float" type="dimen">1</item>
 </resources>
