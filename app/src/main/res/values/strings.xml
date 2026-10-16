@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tugas PAM 5</string>
+    <string name="form_title">Form Biodata</string>
+    <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="first_name">Nama Depan</string>
+    <string name="last_name">Nama Belakang</string>
+    <string name="email">Email</string>
+    <string name="birth_date">Tgl Lahir</string>
+    <string name="experience">Experience</string>
+    <string name="skill_title">Pilih Skill Anda :</string>
+    <string name="skill_android">Android</string>
+    <string name="skill_uiux">UI/UX</string>
+    <string name="skill_web">Web</string>
+    <string name="proceed">Proceed</string>
+
+
+    <string-array name="experience_options">
+        <item>Pemula</item>
+        <item>Menengah</item>
+        <item>Mahir</item>
+    </string-array>
+</resources>
