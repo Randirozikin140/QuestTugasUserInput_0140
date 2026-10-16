@@ -196,3 +196,62 @@ fun FormBiodata() {
                             .fillMaxWidth()
                             .padding(top = dimensionResource(R.dimen.spacing_m))
                     )
+
+                    // Tgl lahir & experience
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_s)),
+                        modifier = Modifier.padding(top = dimensionResource(R.dimen.spacing_m))
+                    ) {
+                        OutlinedTextField(
+                            value = tglLahir,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(stringResource(R.string.birth_date)) },
+                            trailingIcon = {
+                                IconButton(onClick = { showDatePicker = true }) {
+                                    Icon(
+                                        imageVector = Icons.Default.DateRange,
+                                        contentDescription = stringResource(R.string.desc_calendar)
+                                    )
+                                }
+                            },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors,
+                            modifier = Modifier.weight(weightEqual)
+                        )
+
+                        ExposedDropdownMenuBox(
+                            expanded = expanded,
+                            onExpandedChange = { expanded = !expanded },
+                            modifier = Modifier.weight(weightEqual)
+                        ) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(stringResource(R.string.experience)) },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
+                                },
+                                singleLine = true,
+                                shape = fieldShape,
+                                colors = fieldColors,
+                                modifier = Modifier.menuAnchor()
+                            )
+                            ExposedDropdownMenu(
+                                expanded = expanded,
+                                onDismissRequest = { expanded = false }
+                            ) {
+                                options.forEach { item ->
+                                    DropdownMenuItem(
+                                        text = { Text(item) },
+                                        onClick = {
+                                            experience = item
+                                            expanded = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
