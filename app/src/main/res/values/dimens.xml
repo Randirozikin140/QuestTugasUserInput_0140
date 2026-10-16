@@ -6,5 +6,10 @@
     <dimen name="spacing_l">24dp</dimen>
     <dimen name="spacing_xs">4dp</dimen>
 
+    <!-- Ukuran -->
+    <dimen name="banner_height">320dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="card_elevation">12dp</dimen>
+
 
 </resources>
