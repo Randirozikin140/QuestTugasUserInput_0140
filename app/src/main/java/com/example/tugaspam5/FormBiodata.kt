@@ -303,3 +303,31 @@ fun FormBiodata() {
             }
         }
     }
+
+    // Dialog pilih tanggal
+    if (showDatePicker) {
+        val dateState = rememberDatePickerState()
+        val datePattern = stringResource(R.string.date_format)
+        val timezone = stringResource(R.string.date_timezone)
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    dateState.selectedDateMillis?.let { millis ->
+                        val fmt = SimpleDateFormat(datePattern, Locale.getDefault())
+                        fmt.timeZone = TimeZone.getTimeZone(timezone)
+                        tglLahir = fmt.format(Date(millis))
+                    }
+                    showDatePicker = false
+                }) { Text(stringResource(R.string.ok)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            }
+        ) {
+            DatePicker(state = dateState)
+        }
+    }
+}
