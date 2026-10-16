@@ -331,3 +331,23 @@ fun FormBiodata() {
         }
     }
 }
+
+@Composable
+private fun SkillCheck(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onChange,
+            colors = CheckboxDefaults.colors(
+                checkedColor = colorResource(R.color.purple_title),
+                uncheckedColor = colorResource(R.color.text_primary),
+                checkmarkColor = colorResource(R.color.button_text)
+            )
+        )
+        Text(
+            text = label,
+            fontSize = spResource(R.dimen.text_small),
+            color = colorResource(R.color.text_primary)
+        )
+    }
+}
