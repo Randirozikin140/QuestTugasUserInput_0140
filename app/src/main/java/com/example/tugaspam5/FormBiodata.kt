@@ -162,3 +162,24 @@ fun FormBiodata() {
                         )
                     )
 
+                    // Nama depan & belakang
+                    Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_s))) {
+                        OutlinedTextField(
+                            value = namaDepan,
+                            onValueChange = { namaDepan = it },
+                            label = { Text(stringResource(R.string.first_name)) },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors,
+                            modifier = Modifier.weight(weightEqual)
+                        )
+                        OutlinedTextField(
+                            value = namaBelakang,
+                            onValueChange = { namaBelakang = it },
+                            label = { Text(stringResource(R.string.last_name)) },
+                            singleLine = true,
+                            shape = fieldShape,
+                            colors = fieldColors,
+                            modifier = Modifier.weight(weightEqual)
+                        )
+                    }
