@@ -277,3 +277,29 @@ fun FormBiodata() {
                         SkillCheck(stringResource(R.string.skill_uiux), skillUiux) { skillUiux = it }
                         SkillCheck(stringResource(R.string.skill_web), skillWeb) { skillWeb = it }
                     }
+
+                    // Tombol Proceed
+                    Button(
+                        onClick = { /* aksi proses data */ },
+                        enabled = formValid,
+                        shape = fieldShape,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(R.color.purple_title),
+                            contentColor = colorResource(R.color.button_text),
+                            disabledContainerColor = colorResource(R.color.button_disabled),
+                            disabledContentColor = colorResource(R.color.button_text)
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = dimensionResource(R.dimen.spacing_l))
+                            .height(dimensionResource(R.dimen.button_height))
+                    ) {
+                        Text(
+                            text = stringResource(R.string.proceed),
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+            }
+        }
+    }
